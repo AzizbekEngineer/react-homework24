@@ -12,7 +12,7 @@ const AdminHeader = ({ setClose }) => {
         <IoIosMenu className="admin__header__humburger" />
       </button>
       <div>
-        <p>John doe</p>
+        <p>Admin Panel</p>
       </div>
     </div>
   );

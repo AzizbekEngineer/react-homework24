@@ -34,18 +34,6 @@ const Sidebar = () => {
             <span>Manage Product</span>
           </NavLink>
         </li>
-        <li className="sidebar__item">
-          <NavLink className={"sidebar__link"} to={"createUser"}>
-            <IoCreateOutline />
-            <span>Create User</span>
-          </NavLink>
-        </li>
-        <li className="sidebar__item">
-          <NavLink className={"sidebar__link"} to={"manageUser"}>
-            <MdManageAccounts />
-            <span>Manage User</span>
-          </NavLink>
-        </li>
       </ul>
       <button className="logout__link" onClick={handleLogOut}>
         <BiLogOut className="log__out__icon" />

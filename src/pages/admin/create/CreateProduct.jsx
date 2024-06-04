@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import "./createProduct.scss";
 import { toast } from "react-toastify";
 import "./createProduct.scss";
+import axios from "axios";
 
 let initialState = {
-  name: "",
+  title: "",
   price: "",
-  desc: "",
+  category: "",
 };
 
 const CreateProduct = () => {
@@ -31,19 +32,19 @@ const CreateProduct = () => {
       <h2 className="form__title">CreateProduct</h2>
       <form className="form__info" onSubmit={handleCreate} action="">
         <div className="form__card">
-          <label htmlFor="name">Product Name:</label>
+          <label htmlFor="name">Product Title:</label>
           <input
             id="name"
-            value={newProduct.name}
+            value={newProduct.title}
             onChange={(e) =>
-              setNewProduct((prev) => ({ ...prev, name: e.target.value }))
+              setNewProduct((prev) => ({ ...prev, title: e.target.value }))
             }
             type="text"
-            placeholder="Nomi"
+            placeholder="Title"
           />
         </div>
         <div className="form__card">
-          <label htmlFor="price">Product Narxi:</label>
+          <label htmlFor="price">Product Price:</label>
           <input
             id="price"
             value={newProduct.price}
@@ -51,19 +52,19 @@ const CreateProduct = () => {
               setNewProduct((prev) => ({ ...prev, price: +e.target.value }))
             }
             type="number"
-            placeholder="Narxi"
+            placeholder="price"
           />
         </div>
         <div className="form__card">
-          <label htmlFor="desc">Product Desc:</label>
+          <label htmlFor="desc">Product Category:</label>
           <input
             id="desc"
-            value={newProduct.desc}
+            value={newProduct.category}
             onChange={(e) =>
-              setNewProduct((prev) => ({ ...prev, desc: e.target.value }))
+              setNewProduct((prev) => ({ ...prev, category: e.target.value }))
             }
             type="text"
-            placeholder="Description"
+            placeholder="Category"
           />
         </div>
         <button className="form__btn">Create</button>

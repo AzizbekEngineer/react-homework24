@@ -14,10 +14,6 @@ const Admin = () => {
           <AdminHeader setClose={setClose} />
           <Outlet />
         </div>
-        {/* <Route path="/admin" element={<Admin />}>
-          <Route path="createProduct" element={<CreateProduct />} />
-          <Route path="manageProduct" element={<ManageProduct />} />
-        </Route> */}
       </div>
     </>
   );
